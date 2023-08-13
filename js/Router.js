@@ -19,32 +19,32 @@ document.addEventListener("click",e=>{
 
 const Rutas={
     404:{
-        template:"./pages/404.html",
+        template:"../pages/404.html",
         title:"404 | "+titlePage,
         description:"Este es la pagina de error"
     },
     "/":{
-        template:"/pages/nosotros.html",
+        template:"../pages/nosotros.html",
         title:"nosotros | "+titlePage,
         description:"Este es la pagina de nosotros"
     },
     "/bordado":{
-        template:"/pages/bordado.html",
+        template:"../pages/bordado.html",
         title:"bordado | "+titlePage,
         description:"Este es la pagina de bordado"
     },
     "/sublimacion":{
-        template:"/pages/sublimacion.html",
+        template:"../pages/sublimacion.html",
         title:"sublimacaion | "+titlePage,
         description:"Este es la pagina de sublimacion"
     },
     "/impresion":{
-        template:"/pages/impresion.html",
+        template:"´../pages/impresion.html",
         title:"impresion | "+titlePage,
         description:"Este es la pagina de impresion"
     },
     "/contacto":{
-        template:"/pages/contactos.html",
+        template:"../pages/contactos.html",
         title:"contactos | "+titlePage,
         description:"Este es la pagina de contactos"
     }
@@ -61,7 +61,7 @@ urlLocattionHandler();
 const urlLocattionHandler= async()=>{
     var location=window.location.pathname;
     if(location.length == 0){
-        location("/")
+        location("../")
     }
     const route =Rutas[location] || Rutas["404"];
 console.log(window.location.origin)
