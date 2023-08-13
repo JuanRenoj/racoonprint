@@ -73,3 +73,39 @@ function onClick(e){
 const Buscar=(e)=>{
     console.log(e.target.value)
   }
+  
+
+document.getElementById("icon-menu-open").addEventListener("click",e=>{
+    openMenu()
+    });
+    document.getElementById("icon-menu-close").addEventListener("click",e=>{
+        openMenu()
+        });
+        
+    function openMenu(){
+    console.log("open menu")
+            let menu=document.getElementById("contain-menu");
+    //        console.log(menu)
+            menu.classList.toggle("close")
+            menu.classList.toggle("open")
+        
+    }
+    
+    function minWidthscreen(x){
+      //  console.log(x)
+      let menu=  document.getElementById("contain-menu");
+        if(x.matches){
+         
+          menu.classList.remove("close");
+          menu.classList.add("open");
+          
+        }else{
+            menu.classList.remove("open");
+            menu.classList.add("close");  
+        }
+    }
+    var x=window.matchMedia("(min-width: 768px)")
+    minWidthscreen(x);
+    x.addEventListener("change",minWidthscreen)
+    
+    

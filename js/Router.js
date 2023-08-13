@@ -1,4 +1,4 @@
-import { getImageBordado } from "./bordado.js";
+/*import { getImageBordado } from "./bordado.js";
 import { getAllDocument } from "./firebase.js";
 import { getPokemon } from "./inicio.js";
 import { getImageSublimacion } from "./sublimacion.js";
@@ -125,7 +125,7 @@ function minWidthscreen(x){
 var x=window.matchMedia("(min-width: 768px)")
 minWidthscreen(x);
 x.addEventListener("change",minWidthscreen)
-
+*/
 
 
   
