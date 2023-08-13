@@ -6,6 +6,7 @@ import { getImageSublimacion } from "./sublimacion.js";
 
 const titlePage="Racoon print";
 
+
 document.addEventListener("click",e=>{
     const {target}=e;
     if(!target.matches("ul li a")){
@@ -15,7 +16,7 @@ document.addEventListener("click",e=>{
    
    // urlRoute(e);
 })
-
+/*
 const Rutas={
     404:{
         template:"/pages/404.html",
@@ -78,7 +79,7 @@ console.log(window.location.origin)
 //window.route=urlRoute;
 //urlLocattionHandler();
 
-
+*/
 function executeFunction(opcion){
 switch(opcion){
     case "/bordado":
