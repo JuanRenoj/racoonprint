@@ -12,7 +12,8 @@ document.addEventListener("click",e=>{
         return;
     }
     e.preventDefault();
-    urlRoute(e);
+   
+   // urlRoute(e);
 })
 
 const Rutas={
@@ -72,10 +73,10 @@ console.log(window.location.origin)
 };
 
 
-window.onpopstate=urlLocattionHandler;
+//window.onpopstate=urlLocattionHandler;
 
-window.route=urlRoute;
-urlLocattionHandler();
+//window.route=urlRoute;
+//urlLocattionHandler();
 
 
 function executeFunction(opcion){
