@@ -1,0 +1,75 @@
+import { RenderCard } from "./card.js";
+
+console.log("ejecutar")
+
+
+
+ export async function getPokemon(){
+try{
+let datos = await fetch("https://pokeapi.co/api/v2/pokemon/");
+let pokemon=await datos.json();
+let containerCard= document.getElementById("container-card");
+pokemon.results.forEach(pokemon =>{
+  getInfoPokemon(pokemon.url,containerCard)
+})
+}catch(error){
+console.log(error)
+}
+}
+
+async function getInfoPokemon(pokemon,divContainer){
+try{
+    let datos= await fetch(pokemon);
+    let newpokemon= await datos.json()
+    let renderdatos={
+        name:newpokemon.name,
+        url:newpokemon.sprites.front_default
+    }
+//renderPokemon(renderdatos,divContainer)
+RenderCard(renderdatos,divContainer)
+}catch(error){
+    console.log(error)
+}
+   
+}
+function renderPokemon(data,divContainer){
+    console.log(data.name)
+    let card=document.createElement("div")
+    card.className="card"
+    let pokename=document.createElement('h4');
+    pokename.className="title"
+    let image=document.createElement("img"); 
+    image.className="image-pokemon"
+    let btnEnviar=document.createElement('a');
+    btnEnviar.className="btn-primary"
+    let containImage=document.createElement("div");
+    containImage.className="contain-image"
+   
+    pokename.innerHTML=data.name;
+    image.src=data.url;
+     btnEnviar.innerHTML="Ver Detalle";
+    btnEnviar.id=data.name;
+    btnEnviar.onclick=(e)=>onClick(e);
+
+    /*let params=new URLSearchParams()
+    params.append("nombre",pokemon.name)
+   btnEnviar.href=`../pages/bordado.html?${params.toString()}`*/
+ 
+    
+    containImage.append(image)
+    card.append(pokename)
+    card.append(containImage);
+    card.append(btnEnviar)
+    
+    divContainer.appendChild(card)
+
+}
+
+
+
+function onClick(e){
+    alert("pokemon:"+e.target.id)
+}
+const Buscar=(e)=>{
+    console.log(e.target.value)
+  }

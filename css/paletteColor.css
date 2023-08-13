@@ -1,0 +1,17 @@
+:root{
+   
+    --primary: #ffffff;
+    --secondary:#29163b;
+    --header:rgb(62, 16, 77);
+    
+    --acent:#ffe920;
+    --shadown:#dfdfdf;
+    --success:#27ffa5;
+    --warning:#fff01c;
+    --error:#ff2b2b;
+    --info:#202020;
+ 
+}
+/* 
+rgb(66, 4, 90)
+*/

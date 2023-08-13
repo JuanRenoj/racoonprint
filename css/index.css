@@ -1,0 +1,240 @@
+@import url("./paletteColor.css");
+
+  @import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Open+Sans:ital,wght@0,400;1,300&family=Poppins:wght@300&display=swap');
+
+body{
+    padding: 0;
+    margin: 0;
+    font-size: 1rem;
+  
+   font-family: 'Open Sans', sans-serif;
+  
+}
+.header{
+    position: relative;
+    background-color: var(--header);
+    top: 0;
+    padding: 0px 10px;
+   display: flex;
+   flex-direction: row;
+
+   justify-content: space-between;
+   text-align: center;
+   align-items: center;
+color: var(--acent);
+overflow: hidden;
+}
+.icon-menu{
+    font-size: 1.5rem;
+    display: none;
+    margin: 8px;
+    color: var(--acent);
+}
+
+
+.contain-menu{
+    display: block;
+    margin-left: 25px;
+    position: absolute;
+    top: 0;
+    right: 35px;
+    height: 100px;
+ 
+
+}
+
+.open{
+    display: block;
+}
+.close{
+    display: none;
+}
+
+
+.menu{
+display: inline-flex;
+list-style: none;
+overflow: hidden;
+}
+.menu li{
+    text-decoration: none;
+    height: 40px;
+    margin:  4px 8px;
+    text-align: center;
+    justify-content: center;
+
+}
+.menu li a{
+    text-decoration: none;
+    font-size: 1.2rem;
+    font-weight: 500;
+       color: var(--acent);
+}
+
+.active{
+    background-color: var(--acent);
+    border-radius:  8px;
+}
+
+.container-card{
+    display: grid;
+    gap: 1rem;
+    grid-auto-rows: 250px;
+    grid-template-columns: repeat(auto-fill, minmax(min(100%, 200px), 1fr));
+    padding: 8px;
+}
+
+.card{
+    background-color: rgba(192, 192, 192, 0.11);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter:blur(5px) ;
+    box-shadow: 4px 4px 8px #1a1a1a41;
+    border-radius: 8px;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+}
+.title{
+    
+   
+    height: 40px;
+    border-radius: 8px;
+    margin: 9px;
+
+}
+.contain-image{
+height: 170px;
+
+text-align: center;
+}
+
+.image-pokemon{
+height: 160px;
+width: 160px;
+}
+.btn-primary{
+    
+    display: flex;
+    height: 30px;
+    width: 100px;
+    border-radius: 9px;
+    justify-content: center;
+    align-items: center;
+    padding: 2px 4px;
+    color: var(--header);
+    text-decoration: none;
+    font-weight: 700;
+   align-self:center;
+  margin: 8px;
+}
+
+.contain-info{
+    background-size: cover;
+    background-position: center;
+    background-image: linear-gradient(0deg, var(--header),rgba(255, 234, 40, 0.952)),url("../assets/img/logoname.png");
+  /*  color: var(--primary);*/
+ 
+    padding: 8px;   
+      
+}
+
+
+.section-info{
+    display: grid;
+    gap: 1rem;
+    grid-auto-rows: 500px;
+    grid-template-columns: repeat(auto-fill, minmax(min(100%,450px), 1fr));
+  
+
+}
+.section-info picture img{
+    width: 400px;
+    height: 400px;
+ /*mix-blend-mode:soft-light;*/
+ 
+}
+
+
+.section-info picture{
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+  
+}
+.section-info p{
+    display: flex;
+    justify-content: center;
+    align-items: center;  
+    padding: 0px 25px;
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: white;
+    letter-spacing: 2px;
+    word-spacing: 3px;
+    text-align: justify;
+}
+footer{
+    padding: 8px;
+    margin: 0;
+    height: 200px;/*
+background-color: rgba(245, 245, 245, 0.062);
+backdrop-filter: blur(8px);
+-webkit-backdrop-filter:blur(8px) ;*/
+background-color: var(--header);
+}
+.title-footer{
+    padding-left: 20px;
+    color: var(--primary);
+}
+.contain-contacts{
+    text-align: center;
+  
+
+}
+.item-contact{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2rem;
+    font-weight: 600;
+    text-decoration: none;
+    padding: 4px 8px;
+    color: var(--primary);
+}
+.allrigths{
+    margin-top: 20px;
+    padding: 8px;
+    text-align: center;
+    font-size: 0.7rem;
+    color: var(--primary);
+}
+
+
+@media screen and ( max-width:768px){
+    .contain-menu{
+        position: absolute;
+        top: 0;
+        right: 0;
+        z-index:1;
+        height: 100%;
+        width: 240px;
+
+      
+    }
+    .menu{
+        display: flex;
+        flex-direction: column;
+        list-style: none;
+        align-items: flex-start;
+        text-align: left;
+        background-color: var(--header);
+        height: 100%;
+        width: 200px;
+      
+        }
+
+        .icon-menu{
+            display: block;
+        }
+
+}
