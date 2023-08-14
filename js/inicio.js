@@ -108,4 +108,13 @@ document.getElementById("icon-menu-open").addEventListener("click",e=>{
     minWidthscreen(x);
     x.addEventListener("change",minWidthscreen)
     
+    Notification.requestPermission().then((permission)=>{
+        if(permission !== 'granted') {
+            return;
+        }
+    });
     
+const notification=new Notification("To do list",{
+    body:"Unread message(2)",
+    icon:"../assets/img/solologo.png",
+})

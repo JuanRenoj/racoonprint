@@ -14,15 +14,15 @@ function goBack(){
 import { RenderCard } from "./card.js";
 import { getBordado } from "./firebase.js";
 
-export function hola(e){
- alert(e.target.id)
-}
+
 
 var datos=[];
+
+getImageBordado();
 export async function getImageBordado(){
   const contain_image_boradado=document.getElementById("contain-image-bordado");
   const txtBuscar=document.getElementById("txtBuscar");
-  txtBuscar.onkeyup=(e)=>Buscar(e)
+  //txtBuscar.onkeyup=(e)=>Buscar(e)
   datos= await getBordado("Bordado");
   
   datos.forEach(element => {
@@ -31,7 +31,7 @@ export async function getImageBordado(){
   });
 }
 
-function Buscar(e){
+const  Buscar=(e)=>{
   const contain_image_boradado=document.getElementById("contain-image-bordado");
   let text=e.target.value.toLowerCase();
   let newdatos=datos.filter((item)=>{
@@ -41,4 +41,13 @@ function Buscar(e){
   contain_image_boradado.innerHTML="";
 newdatos.forEach(item=> RenderCard(item,contain_image_boradado,"Bordado"))
 }
- 
+
+document.getElementById("txtBuscar").addEventListener("keyup",(e)=>{
+Buscar(e)
+}
+)
+
+
+function hola(e){
+  alert(e.target.id)
+}

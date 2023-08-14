@@ -71,7 +71,7 @@ updateDoc
   } from "https://www.gstatic.com/firebasejs/10.1.0/firebase-firestore.js";
   import { RenderCard } from "./card.js";
   
-import { hola } from "./bordado.js";
+
   // TODO: Add SDKs for Firebase products that you want to use
   // https://firebase.google.com/docs/web/setup#available-libraries
 
