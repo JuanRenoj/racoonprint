@@ -39,11 +39,11 @@ overflow: hidden;
 
 .contain-menu {
 
-    display: block;
+    display: none;
 
     position: absolute;
     top: 0;
-    right: -300px;
+    right: 0px;
     height: 100vh;
  z-index: 1;
 
@@ -172,8 +172,8 @@ transform: rotate(0deg);
     
 }
 .open{
-   
-    right: 0;
+   display: block;
+    
     transition:  all 1s ease-in-out;
 }
 .open .icon-menu-close span:nth-child(1){
@@ -185,8 +185,8 @@ animation:arriba 2s ;
 }
 
 .close{
+    display: none;
     
-    right: -300px;
     transition: all 1s ease-in-out;
 }
 
