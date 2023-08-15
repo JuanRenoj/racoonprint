@@ -1,7 +1,10 @@
+
 export function RenderCard(data, divContainer,tipo){
 
     let card=document.createElement("div")
     card.className="card"
+    let divfront=document.createElement("div");
+    divfront.className="divfront"
     let nombre=document.createElement('h5');
     nombre.className="title"
     let detalle=document.createElement('p');
@@ -14,13 +17,12 @@ export function RenderCard(data, divContainer,tipo){
     btnEnviar.className="btn-primary"
     let containImage=document.createElement("div");
     containImage.className="contain-image"
-   
     nombre.innerHTML=data.nombre;
     detalle.innerHTML=data.descripcion;
     image.src=data.url;
- //   btnEnviar.innerHTML="Detalle";
-    btnEnviar.id=`btn${tipo}`;
-    btnEnviar.innerHTML=icon
+    btnEnviar.appendChild(icon)
+
+    btnEnviar.id=`btn${tipo}`;   
     btnEnviar.href=`https://wa.me/text=necesito mas informacion de esta imagen ${tipo}:${nombre}&phone=+50247507647`
 
     /*let params=new URLSearchParams()
@@ -29,11 +31,12 @@ export function RenderCard(data, divContainer,tipo){
  
     
     containImage.append(image)
-    card.append(nombre)
-    card.append(containImage);
-    card.append(detalle)
-    card.append(btnEnviar)
+    divfront.append(nombre)
+    divfront.append(containImage);
+    divfront.append(detalle)
+    divfront.append(btnEnviar)
     
+    card.append(divfront)
     divContainer.appendChild(card)
 
 }

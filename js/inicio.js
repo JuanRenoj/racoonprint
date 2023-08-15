@@ -79,19 +79,27 @@ document.getElementById("icon-menu-open").addEventListener("click",e=>{
     openMenu()
     });
     document.getElementById("icon-menu-close").addEventListener("click",e=>{
-        openMenu()
-        });
+CloseMenu();        });
         
     function openMenu(){
     console.log("open menu")
             let menu=document.getElementById("contain-menu");
     //        console.log(menu)
-            menu.classList.toggle("close")
-            menu.classList.toggle("open")
+            menu.classList.remove("close")
+            menu.classList.add("open")
         
     }
     
-    function minWidthscreen(x){
+    function CloseMenu(){
+        console.log("close menu")
+                let menu=document.getElementById("contain-menu");
+        //        console.log(menu) 
+        menu.classList.remove("open")
+                menu.classList.add("close")
+               
+            
+        }
+   /* function minWidthscreen(x){
       //  console.log(x)
       let menu=  document.getElementById("contain-menu");
         if(x.matches){
@@ -106,7 +114,7 @@ document.getElementById("icon-menu-open").addEventListener("click",e=>{
     }
     var x=window.matchMedia("(min-width: 768px)")
     minWidthscreen(x);
-    x.addEventListener("change",minWidthscreen)
+    x.addEventListener("change",minWidthscreen)*/
     
     Notification.requestPermission().then((permission)=>{
         if(permission !== 'granted') {
