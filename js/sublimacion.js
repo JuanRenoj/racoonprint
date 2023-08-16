@@ -21,15 +21,15 @@ export async function getImageSublimacion(){
 
 const  Buscar=(text)=>{
   let newdatos=datos.filter((item)=>{
-    return item.nombre.toLowerCase().includes(text) || item.descripcion.toLowerCase().includes(text);
-  }).map((element) => {return element})
+    return item.nombre.toLowerCase().includes(text);
+  }).map((element) => {return element});
   contain_image_sublimacion.innerHTML="";
 newdatos.forEach(item=> RenderCard(item,contain_image_sublimacion,tipo))
 }
 
 txtBuscar.addEventListener("keyup",(e)=>{
-  
-Buscar(e.target.value.toLowerCase())
+  let txt=e.target.value.toLowerCase();
+Buscar(txt)
 }
 )
 

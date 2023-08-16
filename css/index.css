@@ -2,32 +2,35 @@
 
   @import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Open+Sans:ital,wght@0,400;1,300&family=Poppins:wght@300&display=swap');
 
-.ligth-theme{
+ /*@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+ */
+
+body{
     padding: 0;
     margin: 0;
     font-size: 1rem;
   width: 100%;
   height: 100%;
-   font-family: 'Open Sans', sans-serif;
+   font-family: 'lato', sans-serif;
+ overflow-x: hidden;
+ font-weight: normal;
+}
+ .ligth-theme{
+   
 background-color: white;
 color: #2b2b2b;
- overflow-x: hidden;
+
 }
 .ligth-theme a{
     color: #2b2b2b;
 }
 
 .dark-theme{
-    padding: 0;
-    margin: 0;
-    font-size: 1rem;
-  width: 100%;
-  height: 100%;
-   font-family: 'Open Sans', sans-serif;
+    
 background-color: rgb(37, 37, 37);
- overflow-x: hidden;
+
  color: white;
- position: relative;
+
 }
 .dark-theme a{
     color: white;
@@ -46,7 +49,8 @@ background-color: rgb(37, 37, 37);
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    box-shadow: 1px  1px 10px #8d8d8d;
+   box-shadow: 0px 0px 2px #8a8a8a;
+
 
 }
 .dark-theme .header{
@@ -243,7 +247,7 @@ animation: arribasailr 2s;
     gap: 5;
 }
 .icon-theme{
-    width: 70px;
+    width: 50px;
     height: 30px;
     display: flex;
     align-items: center;
@@ -304,8 +308,8 @@ animation: arribasailr 2s;
     display: grid;
     gap: 1.2rem;
     position: relative;
-    grid-auto-rows: 280px;
-    grid-template-columns: repeat(auto-fill, minmax(min(100%, 200px), 1fr));
+    grid-auto-rows: 225px;
+    grid-template-columns: repeat(auto-fill, minmax(min(100%, 150px), 1fr));
     padding: 8px 10px;
 }
 
@@ -317,7 +321,7 @@ animation: arribasailr 2s;
     -webkit-backdrop-filter:blur(5px) ;
     box-shadow: 4px 4px 8px #adadada8;*/
     border-radius: 8px;
-    margin: 0;
+    
    position: relative;
 }
 
@@ -330,10 +334,13 @@ animation: arribasailr 2s;
     overflow: hidden;
     transition: .8s;
      box-shadow: 2px 5px 8px #5a5a5a; 
+    
 }
 .card .divfront{
   transform: perspective(600px) rotateY(0deg); 
-
+  display: flex;
+  flex-direction: column;
+  padding: 0;
 }
 .card .divfront img{
     height: 100%;
@@ -341,20 +348,26 @@ animation: arribasailr 2s;
 
     position: absolute;
 }
-.card .divfront h3{
+.card .divfront .divnombre{
+    height: 60px;
+  width: 100%;
+    position: absolute;    
+    bottom: 0;
+   background-color: #3b3b3b98;
+  display: flex;
+  flex-direction: column;
+padding: 6px 8px;
+}
+.card .divfront .divnombre h3{
     height: 60px;
     width: 100%;
-    position: absolute;
-    bottom: 0;
-   background-color: #3aa0ffe3;
-  
- padding: 0px 10px;
-}
+    color: white;
+  }
 .card .divback{
    transform: perspective(600px) rotateY(180deg);
    width: 100%;
    height: 100%;
-   background-color: #2f6ef7;
+  /* background-color: #2f6ef7;*/
  
    display: flex;
    flex-direction: column;
@@ -426,22 +439,23 @@ animation: arribasailr 2s;
     font-size: 1.1rem;
     height: 30px;
     border-radius: 10px;
-    border: 2px solid #8b8b8b;
+    border: 2px solid #c2c2c2;
+    color: #c2c2c2;
     outline: none;
-    background-color: #ffffff96;
+    background-color: #ffffff48;
 }
 .icon-search{
     
     position: absolute;
     left: 15px;
-    font-size: 1.1rem;
-    color: #8b8b8b;
+    font-size: 1.3rem;
+    color: #c2c2c2;
 }
 .icon-delete{
     position: absolute;
     right: 15px;
-    font-size: 1.2rem;
-    color: #8b8b8b;
+    font-size: 2.15rem;
+    color: #c2c2c2;
  
 }
 
@@ -449,13 +463,13 @@ animation: arribasailr 2s;
     cursor: pointer;
 }
 .txtBuscar:focus{
-    border: 2px solid #5fd3f0;
+    border: 2px solid #ffffff;
     box-shadow: 0px 0px 10px #5fd3f0;
     
 } 
 .txtBuscar:focus ~ i {
-    color: #5fd3f0;;
- text-shadow: 0px 0px 10px #5fd3f0;
+    color: #5fd3f0;
+/* text-shadow: 0px 0px 10px #5fd3f0;*/
 
 }
 

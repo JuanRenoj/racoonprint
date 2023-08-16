@@ -7,20 +7,23 @@ export function RenderCard(data, divContainer,tipo){
     divfront.className="face divfront"
     let divback=document.createElement("div");
     divback.className="face divback"
-    let nombre=document.createElement('h3');
-   
+
+    let nombre=document.createElement('h3'); 
     let nombre2=document.createElement('h3');
-    nombre2.className="title"
+  
     let detalle=document.createElement('p');
-    detalle.className="desc"
+  
     let image=document.createElement("img"); 
-    image.className="image-card"
+
     let btnEnviar=document.createElement('a');
     let icon=document.createElement("i");
     icon.className='bx bxl-whatsapp';
-    btnEnviar.className="btn-primary"
+  
     let containlink=document.createElement("div");
     containlink.className="contain-link"
+    let divnombre=document.createElement("div");
+    divnombre.className="divnombre"
+
     nombre.innerHTML=data.nombre;
     nombre2.innerHTML=data.nombre;
     detalle.innerHTML=data.descripcion;
@@ -36,10 +39,10 @@ export function RenderCard(data, divContainer,tipo){
     params.append("nombre",pokemon.name)
    btnEnviar.href=`../pages/bordado.html?${params.toString()}`*/
  
-    
+    divnombre.append(nombre)
     containlink.append(btnEnviar)
-      divfront.append(image);
-    divfront.append(nombre)
+    divfront.append(image);
+    divfront.append(divnombre)
   
     divback.append(nombre2)
     divback.append(detalle)
