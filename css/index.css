@@ -37,17 +37,16 @@ background-color: rgb(37, 37, 37);
 /** css menu  y side barr*/
 .header{
     position: sticky;
+    height: 60px;
     z-index: 1;
     background-color: var(--primary);
     top: 0;
     padding: 0px 10px;
-   display: flex;
-   flex-direction: row;
-height: 60px;
-   justify-content: space-between;
-   text-align: center;
-   align-items: center;
-box-shadow: 1px  1px 10px #8d8d8d;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 1px  1px 10px #8d8d8d;
 
 }
 .dark-theme .header{
@@ -239,27 +238,34 @@ animation: arribasailr 2s;
 .div-menu{
 
     display: flex;
+    flex-direction: row;
+    align-items: center;
     gap: 5;
 }
 .icon-theme{
-    width: 35px;
-    height: 35px;
-    display: grid;
-    place-items: center;
+    width: 70px;
+    height: 30px;
+    display: flex;
+    align-items: center;
     position: relative;
+    
+    border-radius: 20px;
+    box-shadow: inset 1px 1px 3px #838383;
 }
 
 .ligth{
-    width: 25px;
-    height: 25px;
+    width: 20px;
+    height: 20px;
     background-color: var(--acent);
     border-radius: 50%;
-    
+    position: absolute;
+    left: 3px;
+    transition: 1s;
 }
 .ligth::before{
    
-    width: 25px;
-    height: 25px;
+    width: 20px;
+    height: 20px;
     background-color: var(--secondary);
     border-radius: 50%;
     position: absolute;
@@ -267,23 +273,25 @@ animation: arribasailr 2s;
     transform: translateY(-4px);
 }
 .dark{
-    width: 25px;
-    height: 25px;
+    width: 20px;
+    height: 20px;
     background-color: var(--acent);
     border-radius: 50%;
-    clip-path: circle(60px at center);
+    position: absolute;
+    right: 5px;
+    transition: 1s;
 }
 
 .dark::before{
     content: " ";
-    width: 25px;
-    height: 25px;
+    width: 20px;
+    height: 20px;
     background-color: var(--primary-dark);
     border-radius: 50%;
     position: absolute;
-    right: 0;
-    transform: translateX(-40px);
-    transform: translateY(-4px);
+    right: 8px;
+    
+    transform: translateY(-1px);
     mask-clip:padding-box ;
 }
 /*css  de los cards de la imagenes*/
