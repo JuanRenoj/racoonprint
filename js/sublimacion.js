@@ -28,7 +28,8 @@ newdatos.forEach(item=> RenderCard(item,contain_image_sublimacion,tipo))
 }
 
 txtBuscar.addEventListener("keyup",(e)=>{
-Buscar(e.target.value)
+  
+Buscar(e.target.value.toLowerCase())
 }
 )
 
