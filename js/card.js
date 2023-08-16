@@ -27,8 +27,10 @@ export function RenderCard(data, divContainer,tipo){
     image.src=data.url;
     btnEnviar.appendChild(icon)
 
-    btnEnviar.id=`btn${tipo}`;   
-    btnEnviar.href=`https://wa.me/text=necesito mas informacion de esta imagen ${tipo}:${nombre}&phone=+50247507647`
+    btnEnviar.id=`btn${tipo}`;
+   // let mensaje=`https://wa.me/text=necesito mas informacion de esta imagen ${tipo}:${nombre}&phone=+50247507647`
+    let mensaje=`https://api.whatsapp.com/send?text=${tipo}: Necesito mas informacion de esta imagen:  ${data.nombre}&image=${data.url}&phone=+50247507647`
+    btnEnviar.setAttribute("href",mensaje)
 
     /*let params=new URLSearchParams()
     params.append("nombre",pokemon.name)
