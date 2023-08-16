@@ -2,7 +2,8 @@ import { RenderCard } from "./card.js";
 
 console.log("ejecutar")
 
-
+const btnTheme=document.getElementById("icon-theme");
+const span_icon_theme=document.getElementById("span-icon-theme");
 
  export async function getPokemon(){
 try{
@@ -99,6 +100,8 @@ CloseMenu();        });
                
             
         }
+
+
    /* function minWidthscreen(x){
       //  console.log(x)
       let menu=  document.getElementById("contain-menu");
@@ -126,3 +129,48 @@ const notification=new Notification("To do list",{
     body:"Unread message(2)",
     icon:"../assets/img/solologo.png",
 })
+
+function applyTheme(anterior, actual){
+document.body.classList.remove(`${anterior}-theme`);
+document.body.classList.add(`${actual}-theme`);
+span_icon_theme.classList.remove(anterior);
+span_icon_theme.classList.add(actual)
+}
+
+function SaveTheme(theme){
+    window.localStorage.setItem("theme",theme);
+}
+btnTheme.addEventListener("click",e=>{
+   ChangeTheme();
+})
+
+function ChangeTheme(){
+    let theme=window.localStorage.getItem("theme");
+    console.log(theme)
+    if(theme !==null){
+    if(theme ==="ligth"){
+        applyTheme("ligth","dark")
+        SaveTheme("dark")
+    }else{ 
+        applyTheme("dark","ligth")
+        SaveTheme("ligth")
+       
+    }
+    return
+}
+applyTheme("ligth","dark")
+SaveTheme("dark")
+}
+
+function getTheme(){
+    let theme=window.localStorage.getItem("theme");
+    console.log(theme)
+    if(theme !==null){
+         applyTheme("ligth",theme) 
+    }
+  
+}
+getTheme();
+
+
+
