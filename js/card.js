@@ -4,23 +4,23 @@ export function RenderCard(data, divContainer,tipo){
     let card=document.createElement("div")
     card.className="card"
     let divfront=document.createElement("div");
-    divfront.className="divfront"
+    divfront.className="face divfront"
     let divback=document.createElement("div");
-    divback.className="divback"
-    let nombre=document.createElement('h4');
-    nombre.className="title"
-    let nombre2=document.createElement('h4');
+    divback.className="face divback"
+    let nombre=document.createElement('h3');
+   
+    let nombre2=document.createElement('h3');
     nombre2.className="title"
     let detalle=document.createElement('p');
     detalle.className="desc"
     let image=document.createElement("img"); 
-    image.className="image-pokemon"
+    image.className="image-card"
     let btnEnviar=document.createElement('a');
     let icon=document.createElement("i");
     icon.className='bx bxl-whatsapp';
     btnEnviar.className="btn-primary"
-    let containImage=document.createElement("div");
-    containImage.className="contain-image"
+    let containlink=document.createElement("div");
+    containlink.className="contain-link"
     nombre.innerHTML=data.nombre;
     nombre2.innerHTML=data.nombre;
     detalle.innerHTML=data.descripcion;
@@ -35,12 +35,13 @@ export function RenderCard(data, divContainer,tipo){
    btnEnviar.href=`../pages/bordado.html?${params.toString()}`*/
  
     
-    containImage.append(image)
+    containlink.append(btnEnviar)
+      divfront.append(image);
     divfront.append(nombre)
-    divfront.append(containImage);
+  
     divback.append(nombre2)
     divback.append(detalle)
-    divback.append(btnEnviar)
+    divback.append(containlink)
     
     card.append(divfront)
     card.append(divback)
