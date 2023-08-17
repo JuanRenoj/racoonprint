@@ -142,6 +142,7 @@ function SaveTheme(theme){
 }
 
 btnTheme.addEventListener("click",(e)=>{
+    alert("funcionado")
    ChangeTheme();
 })
 
