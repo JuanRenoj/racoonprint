@@ -564,10 +564,16 @@ padding: 6px 8px;
 .section-info svg{
     width: 80%;
     height: 80%;
-    fill: #4992ff;
-    animation: wabes 5s 0.1s ease alternate infinite;
-    
-
+    fill: #deff49;
+    animation: wabes 10s infinite;
+    position: absolute;
+    animation-delay:  calc(.3s * var(--i)); 
+}
+.section-info .contain-name{
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    bottom: 0;
 }
 /*
 .ligth-theme  .section-info svg{
@@ -579,13 +585,14 @@ padding: 6px 8px;
    */
 
 @keyframes wabes {
-    0%{
-    fill:#4992ff;
-        transform: scale(0);
+    0%,100%{
+        fill:#ff0953;
+        transform: scale(0.5);
     }
    
-    100%{
-        fill:#33cefd;
+    50%{
+           fill:#561370;
+
         transform: scale(1);
     }
    /* especial para esxpande  30%{
@@ -653,6 +660,7 @@ padding: 6px 8px;
     -webkit-text-fill-color: transparent;
     animation: textclip 2s linear infinite;
     display: inline-block;
+  
     }
 
 @keyframes textclip {
@@ -670,6 +678,7 @@ padding: 6px 8px;
     font-weight: bold;
     font-size: 1.5rem; 
     -webkit-box-reflect: below -12px linear-gradient(transparent, #0a0a0a52);
+    
     
 }
 
