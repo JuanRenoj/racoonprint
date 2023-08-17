@@ -216,12 +216,12 @@ animation:arriba 2s ;
 
 .close {
     visibility: hidden;
-  transition: all 1s 1s ease-out;
+  
 }
 .close .icon-menu-close span:nth-child(1),
 .close .icon-menu-close span:nth-child(2){
     visibility: hidden; 
-    transition: all 1s 1s ease-out;
+    
 }
 
 .close .icon-menu-close span:nth-child(1){
