@@ -8,11 +8,11 @@ export function RenderCard(data, divContainer,tipo){
     let divback=document.createElement("div");
     divback.className="face divback"
 
-    let nombre=document.createElement('h3'); 
-    let nombre2=document.createElement('h3');
+    let nombre=document.createElement('label'); 
+    let nombre2=document.createElement('label');
   
     let detalle=document.createElement('p');
-  
+    let picture=document.createElement("picture"); 
     let image=document.createElement("img"); 
 
     let btnEnviar=document.createElement('a');
@@ -28,6 +28,7 @@ export function RenderCard(data, divContainer,tipo){
     nombre2.innerHTML=data.nombre;
     detalle.innerHTML=data.descripcion;
     image.src=data.url;
+    picture.appendChild(image)
     btnEnviar.appendChild(icon)
 
     btnEnviar.id=`btn${tipo}`;
@@ -41,7 +42,7 @@ export function RenderCard(data, divContainer,tipo){
  
     divnombre.append(nombre)
     containlink.append(btnEnviar)
-    divfront.append(image);
+    divfront.append(picture);
     divfront.append(divnombre)
   
     divback.append(nombre2)
