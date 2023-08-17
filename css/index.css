@@ -851,12 +851,13 @@ padding: 6px 8px;
     align-items: center;  
 
     font-size: 1.2rem;
-    font-weight: 500;
+    
 padding: 10px 25px;   
-    letter-spacing: 2px;
+    letter-spacing: 1px;
     word-spacing: 3px;
     text-align: justify;
 }
+/*================================================estilos del footer ====================================================*/
 footer{
     padding: 8px;
     margin: 8px 0px;
