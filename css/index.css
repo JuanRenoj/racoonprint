@@ -527,7 +527,16 @@ padding: 6px 8px;
     gap: 1.3rem;
     grid-auto-rows: 550px;
     grid-template-columns: repeat(auto-fill, minmax(min(100%,450px), 1fr));
-  
+    background-repeat: no-repeat;
+    background-clip: content-box;
+    background-position: center;
+    
+}
+.ligth-theme .section-info{
+    background-image: linear-gradient(0deg, #fff,#ffffffe3), url("../assets/img/Recurso\ 1.svg");
+}
+.dark-theme .section-info{
+    background-image: linear-gradient(0deg, #252525,#252525a4), url("../assets/img/Recurso\ 1.svg");
 }
 .section-info .div-der{
    
@@ -536,6 +545,7 @@ padding: 6px 8px;
     justify-content: center;
     align-items: center;
     gap: 1px;
+   
 
 }
 .section-info .div-izq{
@@ -545,6 +555,7 @@ padding: 6px 8px;
     justify-content: center;
     align-items: center;
     gap: 1px;
+    background-size: cover;
 
 }
 .section-info svg{

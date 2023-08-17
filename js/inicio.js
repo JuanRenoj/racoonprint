@@ -1,10 +1,10 @@
-import { RenderCard } from "./card.js";
+
 
 console.log("ejecutar")
 
 const btnTheme=document.getElementById("icon-theme");
 const span_icon_theme=document.getElementById("span-icon-theme");
-
+/*
  export async function getPokemon(){
 try{
 let datos = await fetch("https://pokeapi.co/api/v2/pokemon/");
@@ -54,8 +54,7 @@ function renderPokemon(data,divContainer){
 
     /*let params=new URLSearchParams()
     params.append("nombre",pokemon.name)
-   btnEnviar.href=`../pages/bordado.html?${params.toString()}`*/
- 
+   btnEnviar.href=`../pages/bordado.html?${params.toString()}`
     
     containImage.append(image)
     card.append(pokename)
@@ -73,7 +72,8 @@ function onClick(e){
 }
 const Buscar=(e)=>{
     console.log(e.target.value)
-  }
+  }*/
+ 
   
 
 document.getElementById("icon-menu-open").addEventListener("click",e=>{
@@ -140,7 +140,8 @@ span_icon_theme.classList.add(actual)
 function SaveTheme(theme){
     window.localStorage.setItem("theme",theme);
 }
-btnTheme.addEventListener("click",e=>{
+
+btnTheme.addEventListener("click",(e)=>{
    ChangeTheme();
 })
 
