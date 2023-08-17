@@ -2,7 +2,7 @@
 
 console.log("ejecutar")
 
-const btnTheme=document.getElementById("icon-theme");
+
 const span_icon_theme=document.getElementById("span-icon-theme");
 /*
  export async function getPokemon(){
@@ -141,9 +141,13 @@ function SaveTheme(theme){
     window.localStorage.setItem("theme",theme);
 }
 
-btnTheme.addEventListener("click",(e)=>{
-    alert("funcionado")
-   ChangeTheme();
+document.getElementById("icon-theme").addEventListener("click",(e)=>{
+try {
+   ChangeTheme();  
+} catch (error) {
+    alert(error)
+}
+  
 })
 
 function ChangeTheme(){
