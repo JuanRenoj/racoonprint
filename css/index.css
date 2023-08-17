@@ -525,7 +525,7 @@ padding: 6px 8px;
 .section-info{
     display: grid;
     gap: 1.3rem;
-    grid-auto-rows: 550px;
+    grid-auto-rows: 400px;
     grid-template-columns: repeat(auto-fill, minmax(min(100%,450px), 1fr));
     background-repeat: no-repeat;
     background-clip: content-box;
@@ -542,14 +542,14 @@ padding: 6px 8px;
    
     display: flex;
     flex-direction: column;
-    justify-content: center;
+   
     align-items: center;
     gap: 1px;
    
 
 }
 .section-info .div-izq{
-   
+  
     display: flex;
     flex-direction: column;
     justify-content: center;
