@@ -349,17 +349,19 @@ animation: arribasailr 2s;
     position: absolute;
 }
 .card .divfront .divnombre{
-    height: 60px;
+    height: 50px;
   width: 100%;
     position: absolute;    
     bottom: 0;
-   background-color: #3b3b3b98;
+   background-image: linear-gradient(0deg, rgb(49, 49, 49), rgba(255, 255, 255, 0));
   display: flex;
   flex-direction: column;
+  justify-content: center;
 padding: 6px 8px;
 }
 .card .divfront .divnombre h3{
-    height: 60px;
+    margin: 0;
+   
     width: 100%;
     color: white;
   }
@@ -488,12 +490,178 @@ padding: 6px 8px;
 
 .section-info{
     display: grid;
-    gap: 1rem;
-    grid-auto-rows: 500px;
+    gap: 1.3rem;
+    grid-auto-rows: 550px;
     grid-template-columns: repeat(auto-fill, minmax(min(100%,450px), 1fr));
   
+}
+.section-info .div-der{
+   
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1px;
 
 }
+.section-info .div-izq{
+   
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1px;
+
+}
+.section-info svg{
+    width: 80%;
+    height: 80%;
+    fill: #4992ff;
+   
+}
+/*
+.ligth-theme  .section-info svg{
+    fill: var(--primary-dark);
+}
+.dark-theme  .section-info svg{
+    fill: var(--primary);
+}
+   */
+
+@keyframes wabes {
+     30%{
+      transform: scale(1);
+    
+       fill: #1e65ff;
+    }
+    100%{
+      transform: scale(1.02);
+      fill: #36cc5c;
+     
+    }
+ /*   0%,
+    100% {
+        
+      clip-path: polygon(
+        0% 45%,
+        16% 44%,
+        33% 50%,
+        54% 60%,
+        70% 61%,
+        84% 59%,
+        100% 52%,
+        100% 100%,
+        0% 100%
+      );
+    }
+  
+    50% {
+      clip-path: polygon(
+        0% 60%,
+        15% 65%,
+        34% 66%,
+        51% 62%,
+        67% 50%,
+        84% 45%,
+        100% 46%,
+        100% 100%,
+        0% 100%
+      );
+    }*/
+    
+}
+
+.oreja-izquierda{
+   
+    animation: wabes 3s 0.1s ease alternate infinite;
+}
+.mechon{
+
+    animation: wabes 3s 0.2s ease alternate infinite;
+}
+.oreja-derecha{
+
+    animation: wabes 3s 0.3s ease alternate infinite;
+}
+
+.cara{
+
+    animation: wabes 3s 0.4s ease alternate infinite;
+}
+
+.title-info{
+    width: 100%;
+    font-weight:900;
+    font-size: 2em;
+    align-self: left;
+    text-align: left;
+    margin-left: 20px;
+    background-image: linear-gradient(  -225deg,#0c8b81 0%,#248cec 29%,#13ff1f 67%,#ff00b3 100%);
+    background-size: auto auto;
+    background-clip: border-box;
+    background-size: 200% auto;
+    color: #fff;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: textclip 2s linear infinite;
+    display: inline-block;
+    }
+.name{
+    width: 100%;
+    font-weight:900;
+    font-size: 2.6em;
+    align-self: center;
+    text-align: center;
+    background-image: linear-gradient(  -225deg,#3d1557 0%,#44107a 29%,#ff1361 67%,#fff800 100%);
+    background-size: auto auto;
+    background-clip: border-box;
+    background-size: 200% auto;
+    color: #fff;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: textclip 2s linear infinite;
+    display: inline-block;
+    }
+
+@keyframes textclip {
+  to {
+    background-position: 200% center;
+  }
+}
+.slogan{
+    width: 100%;
+   
+    display: flex;
+    position: relative;
+    flex-direction: row;
+    justify-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 1.5rem; 
+    -webkit-box-reflect: below -12px linear-gradient(transparent, #0a0a0a52);
+    
+}
+
+@keyframes ondas {
+    0%, 40%, 100%{
+        transform: translateY(0);
+    }
+    20%{
+        transform:  translateY(-20px);
+    }
+}
+.slogan span{
+    margin: 2px;
+    position: relative;
+    display: inline-block;
+    animation: ondas 1s infinite;
+    animation-delay:  calc(.1s * var(--i)); 
+   
+}
+
+
 .section-info picture img{
     width: 100%;
     height: auto;
