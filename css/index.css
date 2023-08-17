@@ -221,15 +221,15 @@ animation:arriba 2s ;
 .close .icon-menu-close span:nth-child(1),
 .close .icon-menu-close span:nth-child(2){
     visibility: hidden; 
-    transition: all 2s 1s ease-out;
+    transition: all 1s 1s ease-out;
 }
 
 .close .icon-menu-close span:nth-child(1){
-animation: arribasalir 2s 1s;
+animation: arribasalir 1s 1s;
 
 }
 .close .icon-menu-close span:nth-child(2){
-    animation: abajosalir 2s 1s;
+    animation: abajosalir 1s 1s;
   
 }
 
