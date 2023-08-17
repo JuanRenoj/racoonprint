@@ -350,7 +350,7 @@ animation: arribasailr 2s;
       padding: 2px 30px;  
       font-size: 1.1rem;
       height: 30px;
-      border-radius: 10px;
+      border-radius: 20px;
       border: 2px solid #9b9b9b;
       color: #c2c2c2;
       outline: none;
@@ -359,7 +359,7 @@ animation: arribasailr 2s;
   .icon-search{
       
       position: absolute;
-      left: 25px;
+      left: 28px;
       font-size: 1.3rem;
       color: #9b9b9b;
   }
