@@ -86,7 +86,8 @@ CloseMenu();        });
     console.log("open menu")
             let menu=document.getElementById("contain-menu");
     //        console.log(menu)
-            menu.classList.remove("close")
+        //    menu.classList.toggle("close")
+        menu.classList.remove("close")
             menu.classList.add("open")
         
     }
@@ -95,9 +96,9 @@ CloseMenu();        });
         console.log("close menu")
                 let menu=document.getElementById("contain-menu");
         //        console.log(menu) 
-        menu.classList.remove("open")
+       
+                menu.classList.remove("open")
                 menu.classList.add("close")
-               
             
         }
 
