@@ -309,7 +309,7 @@ animation: arribasalir 1s 1s;
  
  display: grid;
  place-items: center;
- grid-template-rows: 50px;/**repeat(auto-fill, minmax(min(100%, 150px), 1fr));*/
+ grid-template-rows: 60px;/**repeat(auto-fill, minmax(min(100%, 150px), 1fr));*/
 grid-template-columns: repeat(auto-fill, minmax(min(100%, 300px),1fr));   
 
 gap: 8px; 
