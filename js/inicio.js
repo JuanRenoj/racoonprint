@@ -164,8 +164,8 @@ function ChangeTheme(){
     }
     return
 }
-applyTheme("ligth","dark")
-SaveTheme("dark")
+applyTheme("dark","ligth")
+SaveTheme("ligth")
 }
 
 function getTheme(){
