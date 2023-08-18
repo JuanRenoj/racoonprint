@@ -74,7 +74,7 @@ const Buscar=(e)=>{
     console.log(e.target.value)
   }*/
  
-  
+ 
 
 document.getElementById("icon-menu-open").addEventListener("click",e=>{
     openMenu()
@@ -91,12 +91,11 @@ CloseMenu();        });
             menu.classList.add("open")
         
     }
+
     
     function CloseMenu(){
         console.log("close menu")
                 let menu=document.getElementById("contain-menu");
-        //        console.log(menu) 
-       
                 menu.classList.remove("open")
                 menu.classList.add("close")
             
@@ -118,7 +117,7 @@ CloseMenu();        });
     }
     var x=window.matchMedia("(min-width: 768px)")
     minWidthscreen(x);
-    x.addEventListener("change",minWidthscreen)*/
+    x.addEventListener("change",minWidthscreen)
     
     Notification.requestPermission().then((permission)=>{
         if(permission !== 'granted') {
@@ -130,7 +129,7 @@ const notification=new Notification("To do list",{
     body:"Unread message(2)",
     icon:"../assets/img/solologo.png",
 })
-
+*/
 function applyTheme(anterior, actual){
 document.body.classList.remove(`${anterior}-theme`);
 document.body.classList.add(`${actual}-theme`);

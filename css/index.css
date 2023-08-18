@@ -304,15 +304,15 @@ animation: arribasalir 1s 1s;
 .container{
 }
 .div-secction{
-    height: 73px;
-    width: 100%;
-    padding: 10px;
+
+ 
+ 
  display: grid;
  place-items: center;
- grid-template-rows: 30px;/**repeat(auto-fill, minmax(min(100%, 150px), 1fr));*/
+ grid-template-rows: 50px;/**repeat(auto-fill, minmax(min(100%, 150px), 1fr));*/
 grid-template-columns: repeat(auto-fill, minmax(min(100%, 300px),1fr));   
 
-gap: 5px; 
+gap: 8px; 
    
 }
 
