@@ -842,8 +842,19 @@ agregar al div contenedor
 
 
 
+.div-info{
+display: grid;
+place-items: center;
+}
+.div-info-msg{
+    width: 330px;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 10px;
 
-
+}
 
 /*================================================estilos del footer ====================================================*/
 footer{
@@ -901,6 +912,7 @@ backdrop-filter: blur(8px);
 }
 
 
+
 /** css for scollbars */
 
 ::-webkit-scrollbar{
@@ -922,6 +934,8 @@ backdrop-filter: blur(8px);
     
     
 }
+
+
 
 /**=================================================responsive  side bar ==========================================================*/
 @media screen and (max-width: 678px) {
