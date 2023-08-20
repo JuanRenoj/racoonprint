@@ -9,15 +9,15 @@ body{
     padding: 0;
     margin: 0;
     font-size: 1rem;
-  width: 100%;
+  width: 100vw;
   height: 100%;
    font-family: 'lato', sans-serif;
- overflow-x: hidden;
+overflow-x: hidden;
  font-weight: normal;
 }
  .ligth-theme{
    
-background-color: white;
+background-color: var(--primary);
 color: #313131;
 
 }
@@ -27,7 +27,7 @@ color: #313131;
 
 .dark-theme{
     
-background-color: rgb(37, 37, 37);
+background-color: var(--primary-dark);
 
  color: white;
 
@@ -40,9 +40,10 @@ background-color: rgb(37, 37, 37);
 /** css menu  y side barr*/
 .header{
     position: sticky;
-    height: 60px;
+
+    width: 100vw;
     z-index: 1;
-    background-color: var(--primary);
+    background-color: var(--primary-dark);
     top: 0;
     padding: 0px 10px;
     display: flex;
@@ -61,20 +62,140 @@ background-color: rgb(37, 37, 37);
     background-color: var(--primary);
 }
 
+.dark-theme .menu{
+    background-color: var(--primary-dark);
+}
+.ligth-theme .menu{
+    background-color: var(--primary);
+}
 
 
 .contain-menu {
-   visibility: visible;
-    height: 60px;
+    
+  padding: 2px 15px;
+    margin: 0px 15px;
+    display: flex;
+ 
 }
 
 
+.icon-menu{
+    display: flex;
+     flex-direction: column;
+     justify-content: space-between;  
+     height: 25px;
+     align-self: center;
+ visibility: hidden;
+   
+ }
+ .icon-menu span{
+     width: 25px;
+     height: 5px;
+     border-radius: 20px;
+     background-color: #a09f9f;
+ }
 
 .menu{
-display: flex;
 list-style: none;
+}
+
+
+.menu-item{
+   display: inline-block;
+   margin: 2px 8px;
+   
+}
+.menu-item a{
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: 500;
 
 }
+
+.open{ 
+    visibility: visible !important;
+  
+ }
+ .open .icon-close span:nth-child(1){
+     animation: arriba 2s;
+ }
+ .open .icon-close span:nth-child(2){
+ animation: abajo 2s;
+ }
+
+ @keyframes arriba {
+    0%{transform: rotate(0deg);}
+    100%{transform: rotate(45deg);}
+}
+@keyframes abajo {
+    0%{transform: rotate(0deg);}   
+    100%{transform: rotate(-45deg);}    
+}
+
+
+
+
+/**=================================================responsive  side bar ==========================================================*/
+@media screen and (max-width: 678px) {
+    .icon-menu{
+        visibility: visible;
+    }
+    
+
+    
+    .menu{
+        background-color: var(--primary-dark);
+        position: absolute;
+        top: 0;
+        right: 0;
+        margin: 0;
+        height: 100vh;
+        width: 200px;
+      box-shadow: 0px 0px 1px #9b9b9b;
+   visibility: hidden;
+    }
+    
+    
+    .menu-item{
+        display: flex;
+        margin: 20px 0px;
+        cursor: pointer;
+        
+        }
+    
+   
+.icon-close{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    position: relative;
+    padding: 0px;
+    margin-top: 15px;
+    
+}
+.icon-close  span:nth-child(1){
+    width: 25px;
+    height: 5px;
+    background-color: #a09f9f;
+transform: rotate(45deg);
+  position: absolute;
+    border-radius: 20px;
+    
+}
+
+.icon-close  span:nth-child(2){
+    width: 25px;
+    height: 5px;
+    border-radius: 20px;
+    background-color:  #a09f9f;
+    position: absolute;
+    transform: rotate(-45deg);
+    
+}
+    
+    }
+
+
 
 
 .dark-theme   .contain-menu{
@@ -83,179 +204,21 @@ list-style: none;
 .ligth-theme  .contain-menu{
     background-color: var(--primary);
 }
-.menu li{
-    display: flex;
-    text-decoration: none;
-    flex-direction: row;
-    height: 40px;
-    margin:  2px 5px;
-    text-align: left;
-    justify-content: left;
 
-}
-.menu li a{
-    text-decoration: none;
-    font-size: 1rem;
-    font-weight: 500;
-    
-      /* color: var(--acent);*/
-}
-
-.icon-menu{
-    visibility: hidden;
-    background-color:  transparent;
-    border: none;
-    height: 25px;
-    width: 35px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-}
-
-.icon-menu span{
-    width: 30px;
-    height: 3px;
-    background-color: var(--acent);
-    color: var(--acent);
-    border-radius: 10px;
-}
-
-.icon-menu-close{
-  
-    background-color: transparent;
-    border: none;
-    height: 35px;
-    width: 35px;
-display: flex;
-flex-direction: column;
-justify-content: space-between;
-align-items: start;
-visibility: hidden;
-}
-
-.icon-menu-close span:nth-child(1){
-    height: 4px;
-    width: 30px;
-    background-color: var(--acent);
-    transform: rotate(45deg);
-    border-radius: 10px;
-    position: absolute;
-    visibility: hidden;
-}
-
-.icon-menu-close span:nth-child(2){
-    height: 4px;
-    width: 30px;
-    background-color: var(--acent);
-    transform: rotate(-45deg);
-    border-radius: 10px;
-    position: absolute;
-    visibility: hidden;
-}
-
-@keyframes arriba {
-    0%{
-transform: rotate(0deg);
-    }
-    100%{
-transform: rotate(45deg);
-    }
-
-    
-}
-@keyframes abajo {
-    0%{
-transform: rotate(0deg);
-    }
-   
-    100%{
-transform: rotate(-45deg);
-    }
-
-    
-}
-
-
-@keyframes arribasalir {
-    0%{
-transform: rotate(45deg);
-    }
-    100%{
-transform: rotate(0deg);
-    }
-
-    
-}
-@keyframes abajosalir {
-    0%{
-transform: rotate(-45deg);
-    }
-   
-    100%{
-transform: rotate(0deg);
-    }
-}
-
-.open  {
-   visibility: visible;
-  
-}
-.open .icon-menu-close span:nth-child(1),
-.open .icon-menu-close span:nth-child(2){
-    visibility: visible;  
-}
-.open .icon-menu-close span:nth-child(1){
-   
-animation:arriba 2s ;
-
-}
-.open .icon-menu-close span:nth-child(2){
-    animation: abajo 2s;
-     
-}
-
-.close {
-    visibility: hidden;
-  
-}
-.close .icon-menu-close span:nth-child(1),
-.close .icon-menu-close span:nth-child(2){
-    visibility: hidden; 
-    
-}
-
-.close .icon-menu-close span:nth-child(1){
-animation: arribasalir 1s 1s;
-
-}
-.close .icon-menu-close span:nth-child(2){
-    animation: abajosalir 1s 1s;
-  
-}
-
-.active{
-    background-color: var(--acent);
-    border-radius:  8px;
-}
 /*ionos dl menu y icon de tema*/
-.div-menu{
 
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    gap: 5;
-    
-}
 .icon-theme{
     width: 50px;
     height: 20px;
     display: flex;
     align-items: center;
     justify-content: center;
-    position: relative;
-    margin: 4px 10px;
+   position: relative;
+ 
+    
     border-radius: 20px;
     box-shadow: inset 1px 1px 3px #838383;
+
 }
 
 .ligth{
@@ -265,18 +228,9 @@ animation: arribasalir 1s 1s;
     border-radius: 50%;
     position: absolute;
     left: 3px;
-    transition: 1s;
-}
-.ligth::before{
    
-    width: 12px;
-    height: 12px;
-    background-color: var(--secondary);
-    border-radius: 50%;
-    position: absolute;
-    transform: translateX(-30px);
-    transform: translateY(-4px);
 }
+
 .dark{
     width: 12px;
     height: 12px;
@@ -284,7 +238,7 @@ animation: arribasalir 1s 1s;
     border-radius: 50%;
     position: absolute;
     right: 5px;
-    transition: 1s;
+
 }
 
 .dark::before{
@@ -295,9 +249,8 @@ animation: arribasalir 1s 1s;
     border-radius: 50%;
     position: absolute;
     right: 5px;
-    
     transform: translateY(-1px);
-    mask-clip:padding-box ;
+    
 }
 /*css  de los cards de la imagenes*/
 
@@ -978,69 +931,3 @@ backdrop-filter: blur(8px);
 }
 
 
-
-/**=================================================responsive  side bar ==========================================================*/
-@media screen and (max-width: 678px) {
-    
-.contain-menu {
-  
-    position: absolute;
-    top: 0;
-
-    right: 0px;
-    height: 100vh;
-    width: 250;
-   
- box-shadow: 1px  1px 3px #8d8d8d;
-
-
-}
-
-
-.menu{
-
-list-style: none;
-overflow: hidden;
-
-width: 200px;  
-height: 100vh;
-display: flex;
-flex-direction: column;
-justify-content: left;
-align-items: center;
-}
-
-
-.menu li{
-    list-style: none;
-    width: 200px;  
-    height: 35px;
-    
-    }
-
-.icon-menu{
-    visibility: visible;
-   
-}
-.icon-menu-close{
-    visibility: visible;
-}
-.icon-menu-close span:nth-child(1){
-      visibility: visible;  
-} 
-.icon-menu-close span:nth-child(2){
-    visibility: visible;  
-} 
-
-}
-@media screen and (min-width: 678px) {
-    
-    .contain-menu {
-      visibility:visible ;
-    }
-    .icon-menu-close,
-.icon-menu-close span{
-      visibility: hidden;  
-} 
-    
-    }

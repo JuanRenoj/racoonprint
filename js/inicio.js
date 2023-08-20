@@ -75,31 +75,26 @@ const Buscar=(e)=>{
   }*/
  
  
+  document.getElementById("icon-open").addEventListener("click",e =>{
+    document.getElementById("menu").classList.toggle("open")
+    document.getElementById("icon-close").classList.toggle("open")
 
-document.getElementById("icon-menu-open").addEventListener("click",e=>{
-    openMenu()
-    });
-    document.getElementById("icon-menu-close").addEventListener("click",e=>{
-CloseMenu();        });
-        
-    function openMenu(){
-    console.log("open menu")
-            let menu=document.getElementById("contain-menu");
-    //        console.log(menu)
-        //    menu.classList.toggle("close")
-        menu.classList.remove("close")
-            menu.classList.add("open")
-        
+})
+
+document.getElementById("icon-close").addEventListener("click",e =>{
+    document.getElementById("menu").classList.toggle("open")
+    document.getElementById("icon-close").classList.toggle("open")
+
+})
+
+document.getElementById("menu").addEventListener("click",e=>{
+    let {target}=e;
+    if(!target.matches(" li a")){
+        return
     }
-
-    
-    function CloseMenu(){
-        console.log("close menu")
-                let menu=document.getElementById("contain-menu");
-                menu.classList.remove("open")
-                menu.classList.add("close")
-            
-        }
+    document.getElementById("menu").classList.toggle("open")
+    document.getElementById("icon-close").classList.toggle("open")
+})
 
 
    /* function minWidthscreen(x){
@@ -164,8 +159,8 @@ function ChangeTheme(){
     }
     return
 }
-applyTheme("dark","ligth")
-SaveTheme("ligth")
+applyTheme("ligth","dark")
+SaveTheme("dark")
 }
 
 function getTheme(){
