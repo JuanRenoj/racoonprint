@@ -479,13 +479,17 @@ padding: 6px 8px;
 .section-info{
     display: grid;
     gap: 1.3rem;
-    grid-auto-rows: 500px;
-    grid-template-columns: repeat(auto-fill, minmax(min(100%,450px), 1fr));
+display: flex;
+flex-direction: row;
+flex-wrap: wrap;
+height: 500px;
+
+    /*  
     background-repeat: no-repeat;
     background-clip: content-box;
     background-position: center;
-    overflow-x: hidden;
-    /*
+    overflow-x: hidden;  grid-auto-rows: 500px;
+    grid-template-columns: repeat(auto-fill, minmax(min(100%,450px), 1fr));
     -webkit-backdrop-filter: blur(10px);
     backdrop-filter: blur(10px);
     background-color: #92929252;*/
@@ -501,7 +505,8 @@ padding: 6px 8px;
    
     display: flex;
     flex-direction: column;
-   
+   width: 300px;
+   flex-grow: 1;
     align-items: center;
     gap: 1px;
    
@@ -514,12 +519,61 @@ padding: 6px 8px;
     justify-content: center;
     align-items: center;
     gap: 1px;
+    width: 300px;
     background-size: cover;
-    
+    flex-grow: 1;
 
 
 }
+.container-image{
+    width: 100%;
+    height: 100%; 
+    display: flex;
+flex-direction: row;
+overflow: hidden;
+align-items: center;
+justify-content: center;
+position: relative;
+}
+.side-cube {
+    width: 150px;
+   
+    transform: skew(-10deg);
+position:absolute;
+}
+.container-image :nth-child(1) {
+left: 50px;
+   height: 250px;
+}
+.container-image :nth-child(2) {
+    left: 150px;
+    z-index: 1; 
+    height: 300px;
+}
+.container-image :nth-child(3) {
+    height: 250px;
+    left: 250px;
+}
 
+
+
+@keyframes zoom {
+    0%,100%{
+        height: 250px;
+    }
+    10%{  z-index: 2; 
+        height: 300px;}
+  
+        49%{
+            z-index: 2; 
+           height: 300px;}
+           50%{
+            
+           height: 250px;}
+    
+}
+/*===============================================estilos giratorios de 3d de las imagenes ==============================================================*/
+/*
 .container-cube{
     width: 100vw;
     height: 100vh;
@@ -560,6 +614,8 @@ animation-delay: calc(-4s * var(--i));
     }
     
 }
+*/
+/*==============================================fin de los giratorios="""""""""""""""""""""""""""""""""*/
 /*
 .div-back{
     width: 100%;
