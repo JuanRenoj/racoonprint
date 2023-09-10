@@ -482,7 +482,7 @@ padding: 6px 8px;
 display: flex;
 flex-direction: row;
 flex-wrap: wrap;
-height: 500px;
+
 
     /*  
     background-repeat: no-repeat;
@@ -501,7 +501,7 @@ height: 500px;
 .dark-theme .section-info{
     background-image: linear-gradient(0deg, #252525,#252525a4), url("../assets/img/Recurso\ 1.svg");
 }*/
-.section-info .div-der{
+.div-der{
    
     display: flex;
     flex-direction: column;
@@ -509,10 +509,10 @@ height: 500px;
    flex-grow: 1;
     align-items: center;
     gap: 1px;
-   
+height: 400px;
 
 }
-.section-info .div-izq{
+.div-izq{
   
     display: flex;
     flex-direction: column;
@@ -520,10 +520,9 @@ height: 500px;
     align-items: center;
     gap: 1px;
     width: 300px;
-    background-size: cover;
     flex-grow: 1;
 
-
+height: 400px;
 }
 .container-image{
     width: 100%;
