@@ -1,15 +1,15 @@
 :root{
    
     --primary: #ffffff;
-    --secondary:#eb2517;
-    --header:rgb(62, 16, 77);
-    --primary-dark: #252525;
-    --acent:#24b8b8;
+    --secondary:#04abaa;  
+    --acent:#eb0555;
+    --text:#1d1d1b;
     --shadown:#dfdfdf;
     --success:#27ffa5;
     --warning:#fff01c;
     --error:#ff2b2b;
     --info:#202020;
+   --border-section:#86868636;
  
 }
 /* 
