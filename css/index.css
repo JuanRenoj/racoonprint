@@ -15,6 +15,7 @@ body{
 overflow-x: hidden;
  font-weight: normal;
  color: var(--text);
+ scroll-behavior: smooth;
 }
  
 
@@ -29,7 +30,7 @@ overflow-x: hidden;
    background-color: var(--text);
     
     top: 0;
-    
+    height: 65px;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -85,7 +86,9 @@ background-color: var(--text);
     font-size: 1.2rem;
     color: var(--primary);
 }
-
+.active a{
+    color: var(--acent);
+   }
 .open{ 
     visibility: visible !important;
   
@@ -137,7 +140,7 @@ background-color: var(--text);
         
         }
     
-   
+
 .icon-close{
     display: flex;
     flex-direction: column;
@@ -205,14 +208,19 @@ transform: rotate(45deg);
 }
 .div-secction{
 
- 
+ /*
  
  display: grid;
  place-items: center;
- grid-template-rows: 60px;/**repeat(auto-fill, minmax(min(100%, 150px), 1fr));*/
+ grid-template-rows: 60px;*repeat(auto-fill, minmax(min(100%, 150px), 1fr));*
 grid-template-columns: repeat(auto-fill, minmax(min(100%, 300px),1fr));   
 
-gap: 8px; 
+gap: 8px; */
+display: flex;
+flex-direction: row;
+flex-wrap: wrap;
+justify-content: space-around;
+align-items: center;
    
 }
 
@@ -221,7 +229,7 @@ gap: 8px;
   width: 300px;
   }
   .title-secction{
-    font-size: 1.2rem;
+    font-size: 1rem;
     font-weight: 500;
 
   }
@@ -265,13 +273,13 @@ gap: 8px;
       cursor: pointer;
   }
   .txtBuscar:focus{
-      border: 2px solid #999999;
-      box-shadow: 0px 0px 15px #999999;
+      border: 2px solid #c9c9c9;
+      box-shadow: 0px 0px 15px #c9c9c9;
       color: #999999;
       
   } 
   .txtBuscar:focus ~ i {
-      color: #999999;;
+      color: #999999;
   /* text-shadow: 0px 0px 10px #5fd3f0;*/
   
   }
@@ -308,6 +316,7 @@ gap: 8px;
     width: 100%;
     display: grid;
     place-items: center;
+    overflow: hidden;
 }
 
 .div-detail{
@@ -318,7 +327,7 @@ gap: 8px;
     background-color: #f5f5f5;
 }
 .div-image  img{
-    height: 175px;
+    height: 190px;
 
     width: auto;
 }
@@ -472,8 +481,9 @@ padding: 6px 8px;
   /*  background-image: linear-gradient(0deg, var(--secondary),#ffffffee),url("../assets/img/logoname.png");
     color: var(--primary);*/
 
- padding:  10px;
+
     position: relative;  
+
 }
 
 
@@ -483,9 +493,9 @@ padding: 6px 8px;
 display: flex;
 flex-direction: row;
 flex-wrap: wrap;
-border-bottom: 1.2px solid var(--border-section);
 
-    /*  
+
+    /*  border-bottom: 1.2px solid var(--border-section);
     background-repeat: no-repeat;
     background-clip: content-box;
     background-position: center;
@@ -504,7 +514,8 @@ border-bottom: 1.2px solid var(--border-section);
    flex-grow: 1;
     align-items: center;
     gap: 1px;
-height: 500px;
+height:calc( 100vh  - 75px);
+
 
 }
 
@@ -518,7 +529,8 @@ height: 500px;
     width: 300px;
     flex-grow: 1;
 position: relative;
-height: 500px;
+height:calc( 100vh  - 75px);
+
 
 }
 .div-izq::after{
@@ -527,9 +539,9 @@ width: 2px;
 height: 250px;
 background-color: var(--acent);
 position: absolute;
-left: 0;
+left: 10px;
 }
-.container-image{
+.container-image-one{
     width: 100%;
     height: 100%; 
     display: flex;
@@ -538,7 +550,65 @@ overflow: hidden;
 align-items: center;
 justify-content: center;
 position: relative;
+background-color: var(--acent);
 }
+
+.container-image-one img{
+    position: absolute;
+    border: 8px solid var(--primary);
+}
+.container-image-one img:nth-child(1){
+    position: absolute;
+    top: 15px;
+    right: 15px;
+ 
+}
+.container-image-one img:nth-child(2){
+    position: absolute;
+    left:20px;
+    bottom:20px;
+
+}
+
+.container-image-two{
+    width: 100%;
+    height: 100%; 
+    display: flex;
+flex-direction: row;
+overflow: hidden;
+align-items: center;
+justify-content: center;
+position: relative;
+background-color: var(--secondary);
+}
+.container-image-three{
+    width: 100%;
+    height: 100%; 
+    display: flex;
+flex-direction: row;
+overflow: hidden;
+align-items: center;
+justify-content: center;
+position: relative;
+background-color: var(--text);
+}
+.container-image-four{
+    width: 100%;
+    height: 100%; 
+    display: flex;
+flex-direction: row;
+overflow: hidden;
+align-items: center;
+justify-content: center;
+position: relative;
+background-color: var(--acent);
+}
+.side-image{
+    width: 300px;
+    height: auto;
+}
+
+/*
 .side-cube {
 width: calc(100% / 3);
 
@@ -579,7 +649,7 @@ right: 40px;
             
            height: 250px;}
     
-}
+}*/
 /*===============================================estilos giratorios de 3d de las imagenes ==============================================================*/
 /*
 .container-cube{
@@ -835,9 +905,9 @@ agregar al div contenedor
   }
 
   .section-info p{
-    font-size: 1.2rem;    
+
     padding: 10px 25px;   
-    letter-spacing: 1px;
+   
     word-spacing: 3px;
     text-align: justify;
 }
@@ -942,7 +1012,7 @@ backdrop-filter: blur(8px);
     display: inline-flex;
     justify-content: center;
     align-items: center;
-    font-size: 1.2rem;
+    font-size: 1.4rem;
     font-weight: 600;
     text-decoration: none;
     padding: 4px 8px;
