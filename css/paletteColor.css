@@ -3,6 +3,7 @@
     --primary: #ffffff;
     --secondary:#04abaa;  
     --acent:#eb0555;
+    --header:#0c0c0c;
     --text:#1d1d1b;
     --shadown:#dfdfdf;
     --success:#27ffa5;
@@ -10,6 +11,7 @@
     --error:#ff2b2b;
     --info:#202020;
    --border-section:#86868636;
+   --height-header:70px;
  
 }
 /* 
